@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Streamlit Dashboard",
+      "type": "python",
+      "request": "launch",
+      "module": "streamlit",
+      "args": [
+        "run",
+        "${workspaceFolder}/app.py"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Camera Pipeline",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_camera.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Bootstrap Database",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/bootstrap_db.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
+

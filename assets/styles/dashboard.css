@@ -1,0 +1,163 @@
+:root {
+  --bg: #05070d;
+  --bg-secondary: #0b1320;
+  --panel: rgba(15, 23, 42, 0.82);
+  --panel-strong: rgba(10, 16, 28, 0.94);
+  --panel-border: rgba(148, 163, 184, 0.14);
+  --text: #e5eef8;
+  --muted: #8da0b6;
+  --primary: #15c39a;
+  --primary-soft: rgba(21, 195, 154, 0.18);
+  --accent: #4da8ff;
+  --danger: #ff5d73;
+  --warning: #f9b94f;
+  --card-shadow: 0 24px 80px rgba(3, 7, 18, 0.55);
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at top left, rgba(77, 168, 255, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(21, 195, 154, 0.12), transparent 26%),
+    linear-gradient(180deg, #03060b 0%, #07111f 46%, #02050a 100%);
+  color: var(--text);
+}
+
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, rgba(4, 7, 14, 0.97) 0%, rgba(8, 14, 26, 0.98) 100%);
+  border-right: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+[data-testid="stSidebar"] * {
+  color: var(--text);
+}
+
+.hero-shell {
+  padding: 1.4rem 1.6rem;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(11, 19, 32, 0.96), rgba(7, 12, 21, 0.92));
+  border: 1px solid rgba(77, 168, 255, 0.16);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(77, 168, 255, 0.08) 45%, transparent 100%);
+  transform: translateX(-100%);
+  animation: hero-shine 5s linear infinite;
+}
+
+@keyframes hero-shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  max-width: 60rem;
+}
+
+.glass-card {
+  background: linear-gradient(160deg, rgba(13, 22, 37, 0.9), rgba(8, 13, 24, 0.9));
+  border: 1px solid var(--panel-border);
+  border-radius: 22px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.metric-card {
+  border-radius: 20px;
+  padding: 1.1rem;
+  background: linear-gradient(180deg, rgba(10, 16, 28, 0.92), rgba(7, 11, 21, 0.92));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  min-height: 145px;
+}
+
+.metric-label {
+  color: var(--muted);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.metric-value {
+  font-size: 2.15rem;
+  font-weight: 800;
+  margin: 0.55rem 0 0.2rem;
+}
+
+.metric-footnote {
+  color: #b6c5d6;
+  font-size: 0.9rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.38rem 0.8rem;
+  font-size: 0.82rem;
+  background: var(--primary-soft);
+  color: #bafae8;
+  border: 1px solid rgba(21, 195, 154, 0.22);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.small-muted {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.live-frame {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(77, 168, 255, 0.18);
+  box-shadow: var(--card-shadow);
+}
+
+div[data-baseweb="select"] > div,
+div[data-baseweb="input"] > div,
+div[data-baseweb="textarea"] > div,
+.stTextInput > div > div > input,
+.stNumberInput input {
+  background: rgba(9, 14, 24, 0.92) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+}
+
+.stButton > button {
+  border-radius: 14px;
+  border: 1px solid rgba(77, 168, 255, 0.24);
+  background: linear-gradient(180deg, rgba(22, 33, 53, 0.96), rgba(10, 18, 30, 0.96));
+  color: var(--text);
+  padding: 0.55rem 1rem;
+}
+
+.stButton > button:hover {
+  border-color: rgba(21, 195, 154, 0.4);
+  color: #ffffff;
+}
+
+.dataframe, .stDataFrame {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
